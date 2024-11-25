@@ -6,13 +6,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin
 public class TodoController {
-    @GetMapping("/todoAPI")
-    public Message hello(@RequestParam(value = "name") String name){
-        String message = "こんにちは。" + name + "さん！";
-        //Messageクラスのインスタンスを作成し、messageをセットする
-        Message msg = new Message(message);
-        return msg;
+    @GetMapping("/todo")
+    public String get() {
+        return "test";
     }
 }
