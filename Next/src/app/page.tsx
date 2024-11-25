@@ -1,5 +1,14 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
-  return (<></>);
+  const handleClick = () => {
+    fetch("http://localhost:8080/todo", {
+      mode: "no-cors",
+    }).then((data) => console.log(data));
+  };
+  return (
+    <>
+      <button onClick={handleClick}>検索</button>
+    </>
+  );
 }

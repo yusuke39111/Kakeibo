@@ -23,8 +23,10 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <Navbar />
-        <Sidebar object={sidebarProps} />
-        {children}
+        <div className="flex">
+          <Sidebar object={sidebarProps} />
+          {children}
+        </div>
       </body>
     </html>
   );
